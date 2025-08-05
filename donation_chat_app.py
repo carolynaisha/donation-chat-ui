@@ -2,7 +2,8 @@ import streamlit as st
 from datetime import datetime
 
 st.set_page_config(page_title="Secure Donation", layout="centered")
-st.title("Thank you for supporting us today. Let’s get started. 🛡️ Secure Donation")
+st.title("Thank you for supporting us today. Let’s get started. 
+st.markdown("🛡️ Secure Donation")
 
 if "step" not in st.session_state:
     st.session_state.step = 1
@@ -19,7 +20,7 @@ if st.session_state.step == 1:
         st.session_state.step = 2
 
 elif st.session_state.step == 2:
-    st.markdown("🔁 **Would you be interested in supporting us monthly?**")
+    st.markdown("🔁 **Would you consider supporting us monthly?**")
     st.caption("Monthly gifts give charities steady income, reduce admin costs and deepen impact over time. They help plan ahead and amplify lifetime value of your gift. " +
                "([4agoodcause.com](https://4agoodcause.com/why-monthly-giving-matters-the-impact-and-sustainability-it-brings/), [readingpartners.org](https://readingpartners.org/blog/monthly-giving-benefits-donor-cause/))")
     monthly = st.radio("Monthly donation?", ["Yes, let's do it", "No, just one-off"])
@@ -31,7 +32,7 @@ elif st.session_state.step == 2:
         st.session_state.step = 3
 
 elif st.session_state.step == 3:
-    see = st.radio("Ready to donate now, or would you like to learn more first?", ["I’m ready to donate", "Tell me more first"])
+    see = st.radio("Ready to donate now, or would you like to find out more about how your money will be spent?", ["I’m ready to donate", "Tell me more first"])
     if st.button("Continue"):
         if see == "Tell me more first":
             st.session_state.step = 4
@@ -40,9 +41,7 @@ elif st.session_state.step == 3:
 
 elif st.session_state.step == 4:
     st.info("🧾 For every £1 donated: 84p goes directly to programmes, 11p supports fundraising and awareness, 5p funds governance/admin.")
-    st.markdown("📖 **Emma’s Story**")
-    st.image(st.session_state.get('story_img') or "https://via.placeholder.com/400", caption="Emma received help after flooding")
-    st.write("""
+    st.markdown("📖 **Emma’s Story**")  
 **Emma’s Journey**  
 Emma, age 9, lived in a region devastated by floods. Unrestricted charity funds meant our team responded quickly—with clean water, shelter and education support. Within days Emma was back in class and dreaming big again.  
 Your gift helped make that possible.
