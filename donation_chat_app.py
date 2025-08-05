@@ -52,7 +52,6 @@ Your gift helped make that possible.
 
 elif st.session_state.step == 5:
     # fallback but skipped
-
 elif st.session_state.step == 6:
     # final form
     st.markdown("🙋 **Please pop in your details:**")
