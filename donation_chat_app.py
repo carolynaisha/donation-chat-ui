@@ -49,9 +49,10 @@ Your gift helped make that possible.
     """)
     if st.button("Now I’m ready to donate"):
         st.session_state.step = 6
-
+        
 elif st.session_state.step == 5:
-    # fallback but skipped
+    pass  # Step intentionally skipped
+
 elif st.session_state.step == 6:
     # final form
     st.markdown("🙋 **Please pop in your details:**")
