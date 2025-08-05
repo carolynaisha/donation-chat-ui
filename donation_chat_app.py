@@ -114,9 +114,7 @@ Your donation helped her return to school within a week — with clean water, fo
 She now dreams of becoming a teacher. Your support made that possible.
 """)
     else:  # logical group
-        st.info("84% of your donation directly supports programme delivery.  
-11% helps us reach more donors.  
-5% supports governance and overheads.")
+        st.info("84% of your donation directly supports programme delivery. 11% helps us reach more donors.5% supports governance and overheads.")
         st.markdown("#### Why unrestricted donations matter")
         st.write("""
 They help us:
